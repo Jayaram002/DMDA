@@ -1,0 +1,12 @@
+marks<-c(45,50,60,70,80,80,90)
+mean_value<-mean(marks)
+median_value<-median(marks)
+getmode<-function(v){
+  uniqv<-unique(v)
+  uniqv[which.max(tabulate(match(v,uniqv)))]
+}
+mode<-getmode(marks)
+cat(marks,"\n")
+cat(mean_value,"\n")
+cat(median_value,"\n")
+cat(mode,"\n")
